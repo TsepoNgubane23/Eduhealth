@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHealth - Learning & Wellness Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Edu<span>Health</span></div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#" onclick="openModal('loginModal')">Login</a></li>
+                </ul>
+                <a href="#" class="btn btn-outline" onclick="openModal('registerModal')">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Personalized Learning & Wellness Platform</h1>
+            <p>EduHealth combines AI-powered education with wellness tracking to help you achieve your learning goals while maintaining mental and physical health.</p>
+            <a href="#" class="btn btn-primary" onclick="openModal('registerModal')">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>How EduHealth Works</h2>
+                <p>Our platform integrates cutting-edge AI technology with proven educational and wellness methodologies</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-img"><i class="fas fa-book"></i></div>
+                    <div class="feature-content">
+                        <h3>Personalized Learning Paths</h3>
+                        <p>AI-generated learning recommendations based on your goals, learning style, and progress.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img"><i class="fas fa-brain"></i></div>
+                    <div class="feature-content">
+                        <h3>Mental Wellness Exercises</h3>
+                        <p>Daily mindfulness activities, stress management techniques, and cognitive exercises.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img"><i class="fas fa-chart-line"></i></div>
+                    <div class="feature-content">
+                        <h3>Progress Tracking</h3>
+                        <p>Comprehensive dashboards to track both your educational progress and wellness metrics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview -->
+    <section class="dashboard-preview" id="dashboard">
+        <div class="container">
+            <div class="section-title">
+                <h2>Interactive Dashboard</h2>
+                <p>Experience a glimpse of our user-friendly dashboard that helps you track both learning and wellness</p>
+            </div>
+            <div class="dashboard-container">
+                <div class="dashboard-tabs">
+                    <div class="dashboard-tab active" onclick="switchTab('learning')">Learning</div>
+                    <div class="dashboard-tab" onclick="switchTab('wellness')">Wellness</div>
+                    <div class="dashboard-tab" onclick="switchTab('ai-assistant')">AI Assistant</div>
+                </div>
+                <div class="dashboard-content">
+                    <div class="tab-content active" id="learning-tab">
+                        <h3>Your Learning Progress</h3>
+                        <div class="progress-container">
+                            <p>Python Programming Course</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <p>75% Complete</p>
+                        </div>
+                        <div class="progress-container">
+                            <p>Data Science Fundamentals</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                            <p>40% Complete</p>
+                        </div>
+                        <div class="progress-container">
+                            <p>Web Development Basics</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                            <p>90% Complete</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Continue Learning</a>
+                    </div>
+                    <div class="tab-content" id="wellness-tab">
+                        <h3>Your Wellness Status</h3>
+                        <div class="wellness-grid">
+                            <div class="wellness-card">
+                                <i class="fas fa-heart"></i>
+                                <h4>Physical Health</h4>
+                                <p>Good - 7,200 steps today</p>
+                            </div>
+                            <div class="wellness-card">
+                                <i class="fas fa-brain"></i>
+                                <h4>Mental Wellness</h4>
+                                <p>Good - Completed meditation</p>
+                            </div>
+                            <div class="wellness-card">
+                                <i class="fas fa-bed"></i>
+                                <h4>Sleep Quality</h4>
+                                <p>Fair - 6.5 hours last night</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-success">Log Wellness Activity</a>
+                    </div>
+                    <div class="tab-content" id="ai-assistant-tab">
+                        <h3>AI Learning Assistant</h3>
+                        <div class="chat-container">
+                            <div class="chat-message ai-message">
+                                <p>Hi there! I see you're learning Python. Would you like me to recommend some exercises based on your progress?</p>
+                            </div>
+                            <div class="chat-message user-message">
+                                <p>Yes, please! I'm struggling with list comprehensions.</p>
+                            </div>
+                            <div class="chat-message ai-message">
+                                <p>No problem! I'll generate some practice exercises for you. Also, I noticed you've been studying for 2 hours straight. Would you like to try a 5-minute mindfulness break?</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Type your message here...">
+                            </div>
+                            <a href="#" class="btn btn-primary">Send Message</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that works best for you, with a free tier to get started</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Free Tier</h3>
+                        <div class="pricing-price">R 0</div>
+                        <p>Forever free</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Basic learning content</li>
+                        <li><i class="fas fa-check"></i> 3 wellness exercises per week</li>
+                        <li><i class="fas fa-check"></i> Limited progress tracking</li>
+                        <li><i class="fas fa-check"></i> Community support</li>
+                        <li><i class="fas fa-times"></i> AI-powered recommendations</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="#" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">Get Started</a>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <div class="pricing-price">R 179</div>
+                        <p>per month</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> All learning content</li>
+                        <li><i class="fas fa-check"></i> Unlimited wellness exercises</li>
+                        <li><i class="fas fa-check"></i> Advanced progress analytics</li>
+                        <li><i class="fas fa-check"></i> AI-powered recommendations</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="#" class="btn btn-primary" onclick="showDemoMessage()">Subscribe Now</a>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Annual</h3>
+                        <div class="pricing-price">R 1,799</div>
+                        <p>per year (save R 349)</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> All Premium features</li>
+                        <li><i class="fas fa-check"></i> 2 months free compared to monthly</li>
+                        <li><i class="fas fa-check"></i> Exclusive content</li>
+                        <li><i class="fas fa-check"></i> Personalized coaching session</li>
+                        <li><i class="fas fa-check"></i> Downloadable resources</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="#" class="btn btn-primary" onclick="showDemoMessage()">Subscribe Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Users Say</h2>
+                <p>Join thousands of satisfied users who have transformed their learning and wellness journey</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "EduHealth has completely changed how I approach learning. The personalized recommendations and wellness breaks have increased my productivity and reduced my stress levels."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SD</div>
+                        <div>
+                            <h4>Sarah Davis</h4>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "As a busy professional, I struggled to balance skill development with self-care. EduHealth's integrated approach has been a game-changer for my career and wellbeing."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div>
+                            <h4>Michael Johnson</h4>
+                            <p>Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The AI assistant is incredible! It not only helps with learning but also reminds me to take breaks and suggests quick wellness activities. My work-life balance has improved dramatically."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AP</div>
+                        <div>
+                            <h4>Amanda Patel</h4>
+                            <p>Graduate Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Notice -->
+    <section class="demo-notice">
+        <div class="container">
+            <div class="notice-content">
+                <h2><i class="fas fa-info-circle"></i> Demo Version</h2>
+                <p>This is a static demo of EduHealth. For the full experience with AI features, payment processing, and user accounts, visit our live application.</p>
+                <a href="https://github.com/TsepoNgubane23/Eduhealth" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-github"></i> View Source Code
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login (Demo)</button>
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="#" onclick="switchToRegister()">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Create an Account</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Full Name</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Confirm Password</label>
+                    <input type="password" id="registerConfirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Register (Demo)</button>
+                <div class="form-footer">
+                    <p>Already have an account? <a href="#" onclick="switchToLogin()">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <span class="footer-logo">EduHealth</span>
+                    <p>Combining quality education with wellness initiatives for a holistic approach to personal development.</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@eduhealth.com">support@eduhealth.com</a></li>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 EduHealth. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
